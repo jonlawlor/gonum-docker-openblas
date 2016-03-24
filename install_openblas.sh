@@ -2,7 +2,7 @@ set -ex
 
 # fetch fortran to build OpenBLAS
 apt-get -y update
-apt-get -y install git-core build-essential gfortran
+apt-get -y install git-core build-essential gfortran curl
 
 
 # fetch OpenBLAS
@@ -22,7 +22,7 @@ curl http://www.netlib.org/blas/blast-forum/cblas.tgz | tar -zx
 # make cblas and install
 pushd CBLAS
 mv Makefile.LINUX Makefile.in
-make BLLIB=/usr/lib/libopenblas.a alllib
+make BLLIB=/usr/lib/libopenblas.a -s alllib
 mv lib/cblas_LINUX.a /usr/lib/libcblas.a
 popd
 popd
