@@ -1,7 +1,7 @@
 set -ex
 
 # fetch fortran to build OpenBLAS
-sudo apt-get install -qq gfortran
+sudo apt-get install -y -qq git-core build-essential gfortran
 
 # fetch OpenBLAS
 pushd ~
@@ -24,3 +24,5 @@ sudo make BLLIB=/usr/lib/libopenblas.a alllib
 sudo mv lib/cblas_LINUX.a /usr/lib/libcblas.a
 popd
 popd
+
+# clean up
