@@ -29,13 +29,11 @@ popd
 
 # fetch gimme and add it to the path
 mkdir ~/bin
-export PATH="$PATH:~/bin"
 curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
 chmod +x ~/bin/gimme
 
 # set up gopath
 mkdir ~/gopath
-export GOPATH=~/gopath
 
 # clean up
 rm -rf ~/OpenBLAS
