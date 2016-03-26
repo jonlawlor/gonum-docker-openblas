@@ -38,4 +38,4 @@ mkdir /root/gopath
 # clean up
 rm -rf ~/OpenBLAS
 rm -rf ~/CBLAS
-apt-get -y remove gfortran curl
+apt-get -y remove gfortran
