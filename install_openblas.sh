@@ -1,7 +1,7 @@
 set -ex
 
 # fetch fortran to build OpenBLAS
-apt-get -y install git-core gfortran curl gcc libc6-dev make
+apt-get -y update && apt-get -y install git-core gfortran curl gcc libc6-dev make
 
 
 # fetch OpenBLAS
@@ -27,15 +27,15 @@ popd
 popd
 
 # fetch gimme and add it to the path
-mkdir ~/bin
-curl -sL -o ~/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
-chmod +x ~/bin/gimme
+mkdir $HOME/bin
+curl -sL -o $HOME/bin/gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+chmod +x $HOME/bin/gimme
 
 # set up gopath
-mkdir /root/gopath
-export GOPATH=/root/gopath
+mkdir $HOME/gopath
+export GOPATH=$HOME/gopath
 
-# clean up
+# clean
 rm -rf ~/OpenBLAS
 rm -rf ~/CBLAS
 apt-get -y remove gfortran make
