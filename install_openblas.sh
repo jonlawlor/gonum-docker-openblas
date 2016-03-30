@@ -2,7 +2,7 @@ set -ex
 
 # fetch fortran to build OpenBLAS
 apt-get -y update
-apt-get -y install git-core build-essential gfortran curl
+apt-get -y install git-core gfortran curl g++ gcc libc6-dev make
 
 
 # fetch OpenBLAS
@@ -34,6 +34,7 @@ chmod +x ~/bin/gimme
 
 # set up gopath
 mkdir /root/gopath
+export GOPATH=/root/gopath
 
 # clean up
 rm -rf ~/OpenBLAS
