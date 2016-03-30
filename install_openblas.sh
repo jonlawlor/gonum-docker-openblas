@@ -39,4 +39,4 @@ export GOPATH=/root/gopath
 # clean up
 rm -rf ~/OpenBLAS
 rm -rf ~/CBLAS
-apt-get -y remove gfortran make
+apt-get -y remove gfortran make libc6-dev
