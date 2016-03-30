@@ -1,7 +1,6 @@
 set -ex
 
 # fetch fortran to build OpenBLAS
-apt-get -y update
 apt-get -y install git-core gfortran curl gcc libc6-dev make
 
 
